@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>变量的优先级</title>
+<body>
+<script language="javascript">
+<!--
+var scope="全局变量";//声明一个全局变量
+function checkscope()                              
+{
+alert(scope); //调用局部变量，将显示“undefined”而不是“局部变量
+var scope="局部变量";//声明一个同名的局部变量
+alert(scope);//使用的是局部变量，将显示“局部变量”
+}
+checkscope();//调用函数，输出结果
+//-->
+</script>
+</body>
+</head>
+</html>  
