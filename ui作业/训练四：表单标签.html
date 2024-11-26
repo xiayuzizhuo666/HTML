@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>
+	  	表单标签应用练习
+	  </title>
+	</head>
+	<body>
+		<form>
+			<table>
+            <caption><b>王者免费送皮肤登记</b></caption>
+            <tr>
+				<!-- 请在这里补充你的代码 -->
+               <td>王者账号QQ/wx</td>
+              <td> <input type="text" name="text_name" id="text_id" ><span>*</span></input></td>
+            </tr>
+            <tr>
+               <td>密码(已加密)</td>
+               <td><input type="password" name="pw_name" id="pwd_id" ></input><span>*</span></td>
+            </tr>
+             <tr>
+               <td>所在省份</td>
+               <td>
+               <select>
+               <option value="--请选择你的国家--"selected>--请选择城市--</option>
+               <option value = "中国">中国</option>
+               </select>
+               </td>
+               </tr>
+               <tr>
+               <td>爱好</td>
+               <td>
+               <input type="checkbox" name="hobby" value="唱" checked id="c"><label for="c">唱</label> 
+               <input type="checkbox" name="hobby" value="跳" checked id="t"><label for="t">跳</label>
+               <input type="checkbox" name="hobby" value="rap" checked id="r"><label for="r">rap</label>
+               <input type="checkbox" name="hobby" value="篮球" checked id="q"><label for="q">篮球</label>
+               </td>
+                </tr>
+                <tr>
+                <td>补充信息（如银行卡号，支付密码等，以便更快安排皮肤）</td>
+                <td>
+                <textarea rows="12" cols="80"></textarea>
+                </td>
+                </tr>
+				<!-- 注意：密码输入框需要展示密码的***隐藏字符状态 -->
+                <tr>
+                <td>
+			<input type="submit" name="submit_name" value="申请"/> 
+            <input type="reset"name="reset_name" value="重置"/>
+            </td></tr>
+            </table>
+		</form>
+	</body>
+</html>
