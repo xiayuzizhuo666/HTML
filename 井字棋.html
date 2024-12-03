@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>井字棋</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 60px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <table width="883" height="850" id="ticTacToeTable">
+    <tr>
+      <td data-cell="0"></td>
+      <td data-cell="1"></td>
+      <td data-cell="2"></td>
+    </tr>
+    <tr>
+      <td data-cell="3"></td>
+      <td data-cell="4"></td>
+      <td data-cell="5"></td>
+    </tr>
+    <tr>
+      <td data-cell="6"></td>
+      <td data-cell="7"></td>
+      <td data-cell="8"></td>
+    </tr>
+  </table>
+  <script>
+    const cells = document.querySelectorAll('td');
+    let currentPlayer = 'X';
+    let gameBoard = ['', '', '', '', '', '', '', '', ''];
+
+    function handleCellClick(event) {
+      const cellIndex = event.target.dataset.cell;
+      if (gameBoard[cellIndex] === '') {
+        gameBoard[cellIndex] = currentPlayer;
+        event.target.textContent = currentPlayer;
+        if (checkWin(currentPlayer)) {
+          alert(`${currentPlayer} wins!`);
+          resetGame();
+        } else if (gameBoard.every(cell => cell!== '')) {
+          alert('It\'s a tie!');
+          resetGame();
+        } else {
+          currentPlayer = currentPlayer === 'X'? 'O' : 'X';
+        }
+      }
+    }
+
+    function checkWin(player) {
+      const winCombos = [
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],
+        [0, 4, 8], [2, 4, 6]
+      ];
+      return winCombos.some(combo => combo.every(index => gameBoard[index] === player));
+    }
+
+    function resetGame() {
+      gameBoard = ['', '', '', '', '', '', '', '', ''];
+      currentPlayer = 'X';
+      cells.forEach(cell => cell.textContent = '');
+    }
+
+    cells.forEach(cell => cell.addEventListener('click', handleCellClick));
+  </script>
+</body>
+
+</html>
