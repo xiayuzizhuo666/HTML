@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS属性background-position的应用</title>
+        <style>
+            div {
+                width: 660px;
+            }
+            p {
+                width: 200px;
+                height: 200px;
+                background-color: silver;
+                background-image: url(image/football.png);
+                background-repeat: no-repeat;
+                float: left;
+                margin: 10px;
+                text-align: center;
+            }
+            #p1_1 {
+                background-position: left top
+            }/* 图像位于左上角,也可以写作top left */
+            #p1_2 {
+                background-position: top
+            }/* 图像位于顶端居中，也可以写作top center或center top*/
+            #p1_3 {
+                background-position: right top
+            }/* 图像位于右上角，也可以写作top right */
+
+            #p2_1 {
+                background-position: 0%
+            }/* 图像位于水平方向左对齐并且垂直居中，也可以写作0% 50% */
+            #p2_2 {
+                background-position: 50%
+            }/* 图像位于正中心，也可以写作50% 50% */
+            #p2_3 {
+                background-position: 100%
+            }/* 图像位于水平方向右对齐并且垂直居中，也可以写作100% 50% */
+
+            #p3_1 {
+                background-position: 0px 100px
+            }/* 图像位于左下角 */
+            #p3_2 {
+                background-position: 50px 100px
+            }/* 图像位于底端并水平居中*/
+            #p3_3 {
+                background-position: 100px 100px
+            }/* 图像位于右下角 */
+        </style>
+    </head>
+    <body>
+        <h3>CSS属性background-position的应用</h3>
+        <hr />
+        <div>
+            <p id="p1_1">left top</p>
+            <p id="p1_2">top</p>
+            <p id="p1_3">right top</p>
+
+            <p id="p2_1">0%</p>
+            <p id="p2_2">50%</p>
+            <p id="p2_3">100%</p>
+
+            <p id="p3_1">0px 100px</p>
+            <p id="p3_2">50px 100px</p>
+            <p id="p3_3">100px 100px</p>
+        </div>
+    </body>
+</html>

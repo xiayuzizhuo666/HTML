@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS相对定位的应用</title>
+        <style>
+            div {
+                width: 200px;
+                height: 380px;
+                border: 1px solid;
+                margin-left: 50px;
+            }
+            p {
+                width: 150px;
+                height: 100px;
+                background-color: #C8EDFF;
+            }
+            .left {
+                position: relative;
+                left: -50px;
+            }
+            .right {
+                position: relative;
+                left: 130px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>CSS相对定位的应用</h3>
+        <hr />
+        <div>
+            <p>
+                正常状态的段落
+            </p>
+            <p class="left">
+                相对自己正常的位置向左边偏移了50像素
+            </p>
+            <p class="right">
+                相对自己正常的位置向右边偏移了130像素
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>购物简易计算器</title>
+<style>
+/*定义计算器块信息*/
+section{
+	background-color:#C9E495;
+	width:260px;
+	height:450px;
+	text-align:center;
+	padding-top:1px;
+}
+/*细边框的文本输入框*/
+.textBaroder
+{
+	border-width:1px;
+	border-style:solid;
+}
+ 
+</STYLE>
+</head>
+<body>
+	<script>
+		/* 计算和展示计算结果的函数，直接改变计算结果值，op作为参数，传入的是操作符号，例如"+" */
+		function compute(op)
+		{  
+			var num1,num2;
+			num1=parseFloat(document.myform.txtNum1.value);
+			num2=parseFloat(document.myform.txtNum2.value);;
+			if (op=="+")
+				document.myform.txtResult.value=num1+num2;
+			if (op=="-")
+				document.myform.txtResult.value=num1-num2;
+			if (op=="*")
+				document.myform.txtResult.value=num1*num2;
+			if (op=="/"  &&  num2!=0)
+				document.myform.txtResult.value=num1/num2;
+		  }
+	</script>
+	<section>
+		<!-- 同学自行上网找一个淘宝网的图标替换掉下面的image/logo.gif -->
+		<h1><img src="logo.webp" width="240" height="99" >欢迎您来淘宝！</h1>
+		<form action="" method="post" name="myform" id="myform">
+			<!-- 同学自行上网找一个购物车的图标替换掉下面的image/shop.gif -->
+			<h3><img src="gouwuche.jpg" width="54" height="54">购物简易计算器</h3>
+
+			<p>第一个数<input name="txtNum1" type="text" class="textBaroder" id="txtNum1" size="25"></p>
+			<p>第二个数<input name="txtNum2" type="text" class="textBaroder" id="txtNum2" size="25"></p>
+
+			<input name="addButton2" type="button" id="addButton2" value="  ＋  " onClick="compute('+')">
+			<input name="subButton2" type="button" id="subButton2" value="  －  " onClick="compute('-')"> 
+			<input name="mulButton2" type="button" id="mulButton2" value="  ×  " onClick="compute('*')">
+			<input name="divButton2" type="button" id="divButton2" value="  ÷  " onClick="compute('/')">
+
+			<p>计算结果<INPUT name="txtResult" type="text" class="textBaroder" id="txtResult" size="25"></p>
+		</form>
+	</section>
+</body>
+</html>

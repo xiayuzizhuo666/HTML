@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS属性empty-cells的应用</title>
+        <style>
+            table {
+                empty-cells: hide
+            }
+        </style>
+    </head>
+    <body>
+        <h3>CSS属性empty-cells的应用</h3>
+        <hr />
+        <table border="1">
+            <caption>
+                隐藏空单元格的边框效果
+            </caption>
+            <tr>
+                <td>年份</td>
+				<td>第一季度</td>
+				<td>第二季度</td>
+				<td>第三季度</td>
+            </tr>
+            <tr>
+                <td>2014</td><td>100</td><td>200</td><td>300</td>
+            </tr>
+            <tr>
+                <td>2015</td><td>150</td><td>250</td><td>350</td>
+            </tr>
+            <tr>
+                <td>2016</td><td>200</td><td>300</td><td></td>
+            </tr>
+        </table>
+    </body>
+</html>
